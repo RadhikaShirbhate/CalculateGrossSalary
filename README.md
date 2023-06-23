@@ -24,4 +24,4 @@ Calculate the gross salary as : basicSalary +HRAPer +DAPer +(batchCount * perkPe
 Class Sourcing
 Fields: id: int, name : String, basicSalary : double, HRAPer : double,DAPer : double,
 enrollmentTarget: int, enrollmentReached: int, perkPerEnrollment: double
-Public Method: calculateGrossSalary() - returns a doubl
+Public Method: calculateGrossSalary() - returns a double.
