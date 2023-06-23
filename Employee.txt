@@ -1,0 +1,36 @@
+public class Employee
+{
+	int id;
+	String name;
+	double BasicSalary;
+	double HRAPer;
+	double DAPer;
+	
+	
+	public Employee(int id, String name, double basicSalary, double hRAPer, double dAPer) {
+		super();
+		this.id = id;
+		this.name = name;
+		BasicSalary = basicSalary;
+		HRAPer = hRAPer;
+		DAPer = dAPer;
+	}
+
+
+	@Override
+	public String toString()
+	{
+		return "Employee [id=" + id + ", name=" + name + ", BasicSalary=" + BasicSalary + ", HRAPer=" + HRAPer
+				+ ", DAPer=" + DAPer + "]";
+	}
+
+	public double calculateGrossSelary()
+	
+	{
+		double GrossSalary = BasicSalary + HRAPer + DAPer;
+		return GrossSalary;
+				
+	}
+
+
+}

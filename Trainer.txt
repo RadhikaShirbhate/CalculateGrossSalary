@@ -1,0 +1,42 @@
+public class Trainer 
+{
+	int id;
+	String name;
+	double BasicSalary;
+	double HRAPer;
+	double DAPer;
+	int BatchCount;
+	double perkPerBatch;
+	
+	
+	
+	public Trainer(int id, String name, double basicSalary, double hRAPer, double dAPer, int batchCount,
+			double perkPerBatch) 
+	{
+		super();
+		this.id = id;
+		this.name = name;
+		BasicSalary = basicSalary;
+		HRAPer = hRAPer;
+		DAPer = dAPer;
+		BatchCount = batchCount;
+		this.perkPerBatch = perkPerBatch;
+	}
+
+	@Override
+	public String toString() 
+	{
+		return "Trainer [id=" + id + ", name=" + name + ", BasicSalary=" + BasicSalary + ", HRAPer=" + HRAPer
+				+ ", DAPer=" + DAPer + ", BatchCount=" + BatchCount + ", perkPerBatch=" + perkPerBatch + "]";
+	}
+
+
+
+	public double calculateGrossSalary()
+	{
+		double GrossSalary = BasicSalary + HRAPer + DAPer +(BatchCount * perkPerBatch);
+		return GrossSalary;
+		
+	}
+
+}

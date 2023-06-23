@@ -1,0 +1,36 @@
+public class Manager 
+{
+	int id;
+	String name;
+	double BasicSalary;
+	double HRAPer;
+	double DAPer;
+	double ProjectAllowance;
+	
+		public Manager(int id, String name, double basicSalary, double hRAPer, double dAPer, double projectAllowance) {
+		super();
+		this.id = id;
+		this.name = name;
+		BasicSalary = basicSalary;
+		HRAPer = hRAPer;
+		DAPer = dAPer;
+		ProjectAllowance = projectAllowance;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Manager [id=" + id + ", name=" + name + ", BasicSalary=" + BasicSalary + ", HRAPer=" + HRAPer
+				+ ", DAPer=" + DAPer + ", ProjectAllowance=" + ProjectAllowance + "]";
+	}
+
+
+	public static double calculateGrossSalary(int id,String name,double BasicSalary,double HRAPer,double DAPer,double ProjectAllowance)
+	{
+		double GrossSalary = BasicSalary+ HRAPer + DAPer + ProjectAllowance;
+	    return GrossSalary;
+	    
+	}
+
+
+}

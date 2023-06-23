@@ -1,0 +1,38 @@
+public class TaxUtil 
+{
+	public double calculateTax(Employee e)
+	{
+		double sal=e.calculateGrossSelary();
+		if(sal>3000)
+			return sal*0.2;
+		else
+			return sal*0.5;
+	}
+	
+	public double calculateTax(Manager m)
+	{
+		double sal=m.calculateGrossSalary();
+		if(sal>3000)
+			return sal*0.2;
+		else
+			return sal*0.5;
+	}
+
+	public double calculateTax(Souring s)
+	{
+		double sal=s.calculateGrossSalary();
+		if(sal>3000)
+			return sal*0.2;
+		else
+			return sal*0.5;
+	}
+	
+	public double calculateTax(Trainer tr)
+	{
+		double sal=tr.calculateGrossSalary();
+		if(sal>3000)
+			return sal*0.2;
+		else
+			return sal*0.5;
+	}
+}

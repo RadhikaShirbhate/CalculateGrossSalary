@@ -1,0 +1,46 @@
+
+public class Souring 
+{
+	int id;
+	String name;
+	double basicSalary;
+	double HRAPer;
+	double DAPer;
+	int enrollmentTarget;
+	int enrollmentReached;
+	double perkPerEnrollment;
+	
+	
+	
+	public Souring(int id, String name, double basicSalary, double hRAPer, double dAPer, int enrollmentTarget,
+			int enrollmentReached, double perkPerEnrollment) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.basicSalary = basicSalary;
+		HRAPer = hRAPer;
+		DAPer = dAPer;
+		this.enrollmentTarget = enrollmentTarget;
+		this.enrollmentReached = enrollmentReached;
+		this.perkPerEnrollment = perkPerEnrollment;
+	}
+	
+
+
+	@Override
+	public String toString() {
+		return "Souring1 [id=" + id + ", name=" + name + ", basicSalary=" + basicSalary + ", HRAPer=" + HRAPer
+				+ ", DAPer=" + DAPer + ", enrollmentTarget=" + enrollmentTarget + ", enrollmentReached="
+				+ enrollmentReached + ", perkPerEnrollment=" + perkPerEnrollment + "]";
+	}
+
+
+
+	public double calculateGrossSalary()
+	{
+		double GrossSalary = basicSalary+ HRAPer +((( enrollmentReached /enrollmentTarget )*100)*perkPerEnrollment);
+		return GrossSalary;
+	
+	}
+
+}

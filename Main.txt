@@ -1,0 +1,95 @@
+import java.util.*;
+public class Main {
+
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the id=");
+		int id=sc.nextInt();
+		System.out.println("Enter the name=");
+		String name=sc.nextLine();
+		sc.nextLine();
+		System.out.println("Which department do u work 1=Employee,2=manager,3=sourcing,4=trainer=");
+		int dep=sc.nextInt();
+		
+		switch(dep)
+		{
+			case 1:
+					{
+						System.out.println("Enter the Basic salary=");
+						double sal=sc.nextDouble();
+						System.out.println("Enter the HRAPer=");
+						double hra=sc.nextDouble();
+						System.out.println("Enter the DAper=");
+						double da=sc.nextDouble();
+			
+						Employee e=new Employee(id,"name",sal,hra,da);
+						TaxUtil t =new TaxUtil();
+						double result=t.calculateTax(e);
+						System.out.println("The tax employe hava to pay :"+result);
+					}
+		
+			case 2:
+					{
+						System.out.println("Enter the Basic salary=");
+						double sal=sc.nextDouble();
+						System.out.println("Enter the HRAPer=");
+						double hra=sc.nextDouble();
+						System.out.println("Enter the DAper=");
+						double da=sc.nextDouble();
+						System.out.println("Enter the projectAllowance=");
+						double pjallow=sc.nextDouble();
+				
+						Manager m=new Manager(id,"name",sal,hra,da,pjallow);
+						TaxUtil t =new TaxUtil();
+						double result=t.calculateTax(m);
+						System.out.println("The tax manager have to pay :"+result);
+			
+					}
+		
+			case 3:
+				{
+					System.out.println("Enter the Basic salary=");
+					double sal=sc.nextDouble();
+					System.out.println("Enter the HRAPer=");
+					double hra=sc.nextDouble();
+					System.out.println("Enter the DAper=");
+					double da=sc.nextDouble();
+					System.out.println("Enter the enrollmentTarget=");
+					int enTget=sc.nextInt();
+					System.out.println("Enter the enrollmentReached=");
+					int enReached=sc.nextInt();
+					System.out.println("Enter the PerkPerEnrollment");
+					double perkPerEn=sc.nextDouble();
+			
+					Souring1 s=new Souring1(id,"name",sal,hra,da,enTget,enReached,perkPerEn);
+					TaxUtil t =new TaxUtil();
+					double result=t.calculateTax(s);
+					System.out.println("The tax Sourcing have to pay :"+result);
+				}
+		
+			case 4: 
+				{
+					System.out.println("Enter the Basic salary=");
+					double sal=sc.nextDouble();
+					System.out.println("Enter the HRAPer=");
+					double hra=sc.nextDouble();
+					System.out.println("Enter the DAper=");
+					double da=sc.nextDouble();
+					System.out.println("Enter the BatchCount=");
+					int btcout=sc.nextInt();
+					System.out.println("Enter the PerkPerEnrollment");
+					double perkPerEn=sc.nextDouble();
+			
+					Trainer tr=new Trainer(id,"name",sal,hra,da,btcout,perkPerEn);
+					TaxUtil t =new TaxUtil();
+					double result=t.calculateTax(tr);
+					System.out.println("The tax Trainer have to pay :"+result);
+				}
+		
+		
+
+			}
+
+		}
+	}
